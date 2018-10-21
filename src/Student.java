@@ -14,7 +14,7 @@ public class Student {
     private static  int id = 1000;
 
     /*
-    Question: Why do I get an error when I try to use the same scanner object on lines 57 and 109.
+    Question: Why do I get an error when I try to use the same scanner object on lines 59 and 113.
     I thought I was going to be able to use this object for all STDIN readings in my entire class.
     Is is the .split() bs or something else? What do you guys think? God Bless! :-)
      */
@@ -57,6 +57,7 @@ public class Student {
                     "to register for: ");
             Scanner in1 = new Scanner(System.in);
             String[] courseNumbers = in1.nextLine().split(" ", 5);
+            //String[] courseNumbers = scanner.nextLine().split(" ", 5);
 
             for (String courseNumber :
                     courseNumbers) {
@@ -110,6 +111,7 @@ public class Student {
         System.out.print("Enter the number(s) corresponding to the course(s) you want to drop out of: ");
         Scanner in2 = new Scanner(System.in);
         String[] coursesDropNumbers = in2.nextLine().split(" ", 5);
+        //String[] coursesDropNumbers = scanner.nextLine().split(" ", 5);
         String[] courseNames = new String[coursesDropNumbers.length];
 
         for (int i = 0; i < coursesDropNumbers.length; i++) {
