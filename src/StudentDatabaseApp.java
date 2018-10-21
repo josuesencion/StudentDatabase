@@ -10,9 +10,5 @@ public class StudentDatabaseApp {
         System.out.println(studentOne.courses);
         studentOne.dropCourses();
         System.out.println(studentOne.courses);
-
-
-
-
     }
 }

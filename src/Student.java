@@ -8,7 +8,7 @@ public class Student {
     private int gradeYear;
     private String studentID;
     //private String courses; //meh
-    public List<String> courses;
+    public List<String> courses; //make it public for now
     private int tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static  int id = 1000;
