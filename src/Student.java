@@ -7,11 +7,10 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String studentID;
-    //private String courses; //meh
     public List<String> courses; //make it public for now
     private int tuitionBalance = 0;
     private static int costOfCourse = 600;
-    private static  int id = 1000;
+    private static int id = 1000;
 
     private final Scanner scanner = new Scanner(System.in);
 
@@ -38,7 +37,7 @@ public class Student {
         this.id++;
         this.studentID = this.gradeYear + "" + this.id;
     }
-    
+
     //Course enrollment method
     public void enroll() {
         if (this.courses == null) {
@@ -56,7 +55,7 @@ public class Student {
                     courseNumbers) {
                 int courseNum = Integer.parseInt(courseNumber);
 
-                if (courseNum == 1 ) {
+                if (courseNum == 1) {
                     if (this.courses.contains("History 101")) {
                         System.out.println("You already registered for History 101");
                     } else {
@@ -93,12 +92,11 @@ public class Student {
         }
     }
 
-
-    //You have to fix this method.....
+    //Drop Courses
     public void dropCourses() {
         System.out.println("These are the courses your are registered for: ");
         for (int i = 0; i < courses.size(); i++) {
-            System.out.println(i+1 + ". " + courses.get(i));
+            System.out.println(i + 1 + ". " + courses.get(i));
         }
 
         System.out.print("Enter the number(s) corresponding to the course(s) you want to drop out of: ");
@@ -114,11 +112,8 @@ public class Student {
                 courseNames) {
             courses.remove(courseName);
         }
-
         System.out.println("Done!");
     }
-
-
 }
 
 
